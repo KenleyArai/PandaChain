@@ -1,3 +1,6 @@
+import time
+
+
 class PBlock:
 
     def __init__(self, index, proof, prev_hash=None, transactions=None):
@@ -5,3 +8,4 @@ class PBlock:
         self.proof = proof
         self.prev_hash = prev_hash
         self.transactions = transactions or []
+        self.timestamp = time.time()
