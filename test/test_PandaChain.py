@@ -13,7 +13,10 @@ class TestPBlock:
         assert len(pc.node_transactions) == 0
 
     def test_create_block(self):
-        pass
+        pc = PandaChain()
+        pc.create_block(0, 3)
+
+        assert len(pc.chain) == 2
 
     def test_create_new_transactions(self):
         pass

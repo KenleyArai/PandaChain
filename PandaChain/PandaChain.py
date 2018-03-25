@@ -15,4 +15,3 @@ class PandaChain:
                        prev_hash, self.node_transactions)
         self.node_transactions = []
         self.chain.append(block)
-        return block
