@@ -1,4 +1,5 @@
 import time
+import hashlib
 
 
 class PBlock:
@@ -9,3 +10,6 @@ class PBlock:
         self.prev_hash = prev_hash
         self.transactions = transactions or []
         self.timestamp = time.time()
+
+    def get_string(self):
+        return "{}{}{}{}{}".format(self.index, self.proof, self.prev_hash, self.transactions, self.timestamp)
