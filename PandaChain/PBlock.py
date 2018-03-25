@@ -13,3 +13,7 @@ class PBlock:
 
     def get_string(self):
         return "{}{}{}{}{}".format(self.index, self.proof, self.prev_hash, self.transactions, self.timestamp)
+
+    @property
+    def get_block_hash(self):
+        return hashlib.sha256(self.get_string().encode()).hexdigest()
