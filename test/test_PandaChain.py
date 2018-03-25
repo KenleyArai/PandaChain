@@ -19,7 +19,11 @@ class TestPBlock:
         assert len(pc.chain) == 2
 
     def test_create_new_transactions(self):
-        pass
+        pc = PandaChain()
+        pc.create_transaction('me', 'you', 25)
+
+        assert pc.node_transactions[0] == {
+            'sender': 'me', 'reciever': 'you', 'amount': 25}
 
     def test_create_proof_of_work(self):
         pass

@@ -15,3 +15,10 @@ class PandaChain:
                        prev_hash, self.node_transactions)
         self.node_transactions = []
         self.chain.append(block)
+
+    def create_transaction(self, sender, reciever, amt):
+        self.node_transactions.append({
+            'sender': sender,
+            'reciever': reciever,
+            'amount': amt
+        })
